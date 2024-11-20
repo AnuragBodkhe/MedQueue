@@ -3,145 +3,202 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f5f9; /* Light gray-blue background for a soft professional look */
-    color: #333; /* Dark gray text for contrast */
+    background-color: #f3f9f9; /* Soft light blue background for calmness */
+    color: #333; /* High-contrast text for readability */
+    line-height: 1.5; /* Improved readability */
 }
 
 /* Centered Image */
 .centered-image {
     display: block;
-    margin: 0 auto;
-    width: 40%; /* Adjusted the width for a cleaner look */
-    max-width: 600px;
-    margin-top: 20px;
-    border-radius: 8px; /* Rounded corners for the image */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 500px; /* Constrain maximum size */
+    border-radius: 8px;
 }
 
 /* Container Styling */
 .container {
-    width: 85%;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #ffffff; /* White background for clarity */
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border: 1px solid #d1e3ea; /* Light border for structure */
+    max-width: 1000px; /* Constrain width for better layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #d1e7e7; /* Soft border for structure */
 }
 
+/* Heading Styles */
 h1 {
     text-align: center;
-    color: #007b83; /* Teal color for main headings */
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #007ba7; /* Trustworthy, calm blue accent */
+    margin-bottom: 15px;
 }
 
-/* Form Styling */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.form label {
-    font-weight: bold;
-    color: #555; /* Soft gray for labels */
-}
-
-.form input, .form select {
-    padding: 10px;
-    margin: 5px 0;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.05); /* Inset shadow for depth */
-    background-color: #f9fafb; /* Light background inside input fields */
-}
-
-.form button {
-    padding: 12px;
-    font-size: 1rem;
-    background-color: #007b83; /* Teal button */
-    color: #fff; /* White text */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.form button:hover {
-    background-color: #005f61; /* Darker teal on hover */
-}
-
-/* Patient Columns */
+/* Adjusted Patient List Layout for Row Arrangement */
 .patient-columns {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
+    justify-content: space-between; /* Ensure even spacing between items */
     margin-top: 20px;
 }
 
+/* Column Styling */
 .column {
-    flex: 1;
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns in a row, with spacing between them */
+    background-color: #f9fbfb; /* Soft white-green background for freshness */
     padding: 15px;
-    background-color: #e3f3f6; /* Soft teal-blue background */
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    border: 1px solid #d1e3ea; /* Light border for columns */
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #d1e7e7; /* Subtle light blue-green border */
     transition: transform 0.2s;
+    min-width: 250px; /* Ensure columns don’t get too narrow */
 }
 
 .column h3 {
     text-align: center;
-    color: #007b83; /* Teal for column headings */
-    margin-bottom: 15px;
     font-size: 1.2rem;
-    border-bottom: 2px solid #005f61; /* Divider line under headings */
-    padding-bottom: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #b0d8d8; /* Light blue-green divider */
+    color: #005f73; /* Calming deep teal */
+}
+
+/* Emergency Status Colors */
+.column.emergency h3 {
+    color: #d32f2f; /* Red for emergency */
+    border-color: #d32f2f;
+}
+
+.column.regular h3 {
+    color: #ffb703; /* Orange for regular */
+    border-color: #ffb703;
+}
+
+.column.minor h3 {
+    color: #388e3c; /* Green for minor */
+    border-color: #388e3c;
 }
 
 .column:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    transform: translateY(-5px);
 }
 
+/* Patient Styling */
 .patient {
-    background-color: #ffffff; /* White background for patient details */
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #d1e3ea; /* Light border for clarity */
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05); /* Light shadow */
+    background-color: #ffffff; /* Clean white background */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d1e7e7; /* Subtle light border */
+    margin-bottom: 10px;
     transition: box-shadow 0.2s;
 }
 
 .patient:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .patient button {
-    margin-top: 8px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    background-color: #006970; /* Slightly darker teal for patient buttons */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    background-color: #007ba7;
+    color: #fff;
+    border-radius: 4px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .patient button:hover {
-    background-color: #004d52; /* Even darker teal on hover */
+    background-color: #005f73;
 }
 
-/* Special Styles for Buttons */
-button {
-    font-family: inherit;
+/* General Styles for Form */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two-column layout */
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1e7e7;
+}
+
+.form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold; /* Improve label visibility */
+}
+
+.form input, .form select, .form textarea {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #d1e7e7;
+    border-radius: 4px;
+    background-color: #f9fbfb; /* Soft green-white for calmness */
+    color: #333;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s;
+}
+
+.form input:focus, .form select:focus, .form textarea:focus {
+    border-color: #007ba7; /* Accent color for focus */
     outline: none;
-    border: none;
 }
 
-button:focus {
-    outline: 2px solid #009ba5; /* Focus indicator */
+.form button {
+    grid-column: span 2; /* Make the button span across the entire width */
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #007ba7;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.form button:hover {
+    background-color: #005f73;
+}
+
+/* Admitted Patients Section */
+.admitted-patients {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next row */
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #edf6f9; /* Soft clinic-like blue-green background */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #007ba7; /* Matching border color */
+    flex-basis: 100%; /* Make this section take up the full width */
+}
+
+/* Column for Admitted Patients */
+.admitted-patients .column {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns for admitted patients */
+    background-color: #ffffff; /* White background for each column */
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #d1e7e7;
+    transition: transform 0.2s;
+    min-width: 250px;
+}
+
+/* Admitted Patients Column Header Color */
+.admitted-patients .column h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #007ba7; /* Accent border for admitted section */
+    color: #005f73; /* Deep teal for professional appearance */
 }
